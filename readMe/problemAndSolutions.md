@@ -1,9 +1,10 @@
 # Problem Faced and Solutions in REACT NATIVE
 - Use React Native and your React knowledge to build native iOS and Android Apps - incl. Push Notifications, Hooks, Redux
-
+## [Official Website](https://reactnative.dev/docs/environment-setup) 
 ## Important Website for settup
 - https://reactnative.dev/docs/environment-setup
 - https://reactnative.dev/docs/getting-started
+- https://medium.com/swlh/a-react-native-kick-start-for-existing-native-projects-c10d2e113988
 
 ## How RN works internally
 - https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html

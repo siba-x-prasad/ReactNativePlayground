@@ -159,8 +159,8 @@ Multiple ways to solve this
 
 
 
-IOS
-
+## IOS
+```
 pod install failed on macOS
 step 1 
 brew install cocoapods 
@@ -168,7 +168,6 @@ step 2 
 sudo arch -x86_64 gem install ffi 
 step 3 
 arch -x86_64 pod install
-```
 [!] No `Podfile' found in the project directory.
 ```
 
@@ -200,6 +199,13 @@ sdk.dir = /Users/USERNAME/Library/Android/sdk (PATH OF THE SDK LOCATION)
 
 
 # ANDROID ISSUES
+- error Android project not found. Are you sure this is a React Native project?
+```
+In the CMD Project root run react-native upgrade.
+if you are still getting issues, make sure you have react-native in dependencies json in package.json, add it if not
+if you are still getting issues, get the version of react native in cmd using react-native -v and check if the value returned in cmd and package.json are same. update the package.json with the value returned in cmd
+```
+
 - Could not determine the dependencies of task ':app:mergeDebugAssets'
 ```
 ./gradlew clean

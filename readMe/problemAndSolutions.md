@@ -99,10 +99,23 @@
 ## DateTime Picker
 - https://www.npmjs.com/package/react-native-reanimated-datepicker
 
-## SET UP IN EXISTING PROJECT
+# SET UP IN EXISTING PROJECT
 - Redirect to the folder 
 - npm install or nix install
 
+## Errors you might get
+- npm notice Beginning October 4, 2021, all connections to the npm registry - including for package installation - must use TLS 1.2 or higher
+```
+First Step: npm set registry=https://registry.npmjs.org/
+Second Step: npm install -g https://tls-test.npmjs.com/tls-test-1.0.0.tgz
+```
+- Network Error
+```
+npm set registry=https://registry.npmjs.org/
+npm cache clear --force
+npm cache verify
+npm install
+```
 
 ## IOS
 - Cd iOS

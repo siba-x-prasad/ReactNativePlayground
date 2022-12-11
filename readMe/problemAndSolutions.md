@@ -168,21 +168,22 @@ step 2 
 sudo arch -x86_64 gem install ffi 
 step 3 
 arch -x86_64 pod install
-
+```
 [!] No `Podfile' found in the project directory.
+```
 
-
-React Native android build failed. SDK location not found
+## React Native android build failed. SDK location not found
+```
 * Go to the android/ directory of your react-native project
 * Create a file called local.properties with this line:
 sdk.dir = /Users/USERNAME/Library/Android/sdk (PATH OF THE SDK LOCATION)
+```
 
+## Project Folder Structure
+- https://stackoverflow.com/questions/60647270/best-practice-to-make-project-structure-react-native
+- https://learn.habilelabs.io/best-folder-structure-for-react-native-project-a46405bdba7
 
-Project Folder Structure
-https://stackoverflow.com/questions/60647270/best-practice-to-make-project-structure-react-native
-https://learn.habilelabs.io/best-folder-structure-for-react-native-project-a46405bdba7
-
-
+## Topics
 1. How react Native works internally
 2. Debugging React Native Application
 3. Component - Functional, class bases
@@ -198,25 +199,28 @@ https://learn.habilelabs.io/best-folder-structure-for-react-native-project-a4640
 
 
 
-ANDROID ISSUES
-Could not determine the dependencies of task ':app:mergeDebugAssets'
+# ANDROID ISSUES
+- Could not determine the dependencies of task ':app:mergeDebugAssets'
+```
 ./gradlew clean
 npm install
+```
+## SDK location not found. Define location with an ANDROID_SDK_ROOT environment
+- Step1: Check whether all your "SDK Platforms" and "SDK Tools" is installed and Updated"
+- Step2: Create "local.properties" file in android folder and paste the following
+- sdk.dir = /Users/si20055491/Library/Android/sdk
+- THIS SHOULD SOLVE YOUR PROBLEMS
 
-SDK location not found. Define location with an ANDROID_SDK_ROOT environment
-Step1: Check whether all your "SDK Platforms" and "SDK Tools" is installed and Updated"
-Step2: Create "local.properties" file in android folder and paste the following
-sdk.dir = /Users/si20055491/Library/Android/sdk
-THIS SHOULD SOLVE YOUR PROBLEMS
-
-> Failed to query the value of task ':react-native-gradle-plugin:compileKotlin' property 'compilerRunner$kotlin_gradle_plugin'.
-   > Kotlin could not find the required JDK tools in the Java installation. Make sure Kotlin compilation is running on a JDK, not JRE.
-
+## Android -  Kotlin could not find the required JDK 
+- Failed to query the value of task ':react-native-gradle-plugin:compileKotlin' property 'compilerRunner$kotlin_gradle_plugin'.
+- Kotlin could not find the required JDK tools in the Java installation. Make sure Kotlin compilation is running on a JDK, not JRE.
+```
 export PATH=$PATH:/Applications/Android Studio.app/contents/jre/Contents/Home/bin/
 export JAVA_HOME=/Applications/"Android Studio.app"/contents/jre/jdk/Contents/Home
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
-
-Error: spawnSync adb ENOENT at Object.spawnSync
+```
+## Error: spawnSync adb ENOENT at Object.spawnSync
+```
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
 export ANDROID_HOME=/Users/si20055491/Library/Android/sdk
 export PATH=$ANDROID_HOME/emulator:$PATH
@@ -224,48 +228,46 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/tools/bin:$PATH
 Android development environment set up: https://reactnative.dev/docs/environment-setup
+```
+## TypeError: Cannot read properties of undefined (reading 'configurations')
 
-TypeError: Cannot read properties of undefined (reading 'configurations')
-
-
-
-ERROR
-Could not determine the dependencies of task ':app:compileDebugJavaWithJavac'.
-> SDK location not found. Define location with an ANDROID_SDK_ROOT environment variable or by setting the sdk.dir path in your project's local properties file at '/Users/SI20055491/Workspace/ReactNative/rntypescriptplayground/android/local.properties'.
-
+## Could not determine the dependencies of task ':app:compileDebugJavaWithJavac'.
+- SDK location not found. Define location with an ANDROID_SDK_ROOT environment variable or by setting the sdk.dir path in your project's local properties file at '/Users/SI20055491/Workspace/ReactNative/rntypescriptplayground/android/local.properties'.
+```
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/Contents/Home
 export ANDROID_HOME=/Users/si20055491/Library/Android/sdk
+```
 
 
-
-IOS BUILD ISSUES AND SOLUTION
-git config --global http.sslVerify false
-I struggled with this for several hours today and this is what finally worked for me:
+## IOS BUILD ISSUES AND SOLUTION
+- git config --global http.sslVerify false
+- I struggled with this for several hours today and this is what finally worked for me:
+```
 1. sudo gem update cocoapods --pre
 2. pod update
 3. clean
 4. build
+```
+- Error: EISDIR: illegal operation on a directory, read
+- Check if other apps running in metro
 
-Error: EISDIR: illegal operation on a directory, read
-Check if other apps running in metro
+## How to see the console.log in Simulator
+- From the iOS simulator, press (⌘+D) and press Remote JS Debugging. This will open a resource, http://localhost:8081/debugger-ui on localhost. 
+- From there, use the Chrome Developer tools JavaScript console to view console.log
 
+## Cocoapod OpenSSL installation issue
+- Probably, there is a misconfiguration in your Xcode... try this:
+- preferences -> Locations -> Set The command line tools.
 
-How to see the console.log in Simulator
-From the iOS simulator, press (⌘+D) and press Remote JS Debugging. This will open a resource, http://localhost:8081/debugger-ui on localhost. From there, use the Chrome Developer tools JavaScript console to view console.log
+## YogaKit/YogaKit.modulemap' not found
+- https://stackoverflow.com/questions/63261150/yogakit-modulemap-not-found-after-running-the-ios-simulator
 
-Cocoapod OpenSSL installation issue
-Probably, there is a misconfiguration in your Xcode... try this:
-preferences -> Locations -> Set The command line tools.
+- After update, open the below file
+- myrnapp.xcworkspace
 
-YogaKit/YogaKit.modulemap' not found
-https://stackoverflow.com/questions/63261150/yogakit-modulemap-not-found-after-running-the-ios-simulator
-
-After update, open the below file
-myrnapp.xcworkspace
-
-Command PhaseScriptExecution failed with a nonzero exit code
-Xcode > Preferences > Accounts
-signing in and out
+## Command PhaseScriptExecution failed with a nonzero exit code
+- Xcode > Preferences > Accounts
+- signing in and out
 
 info Running jetifier to migrate libraries to AndroidX. You can disable it using "--no-jetifier" flag.
 npx react-native run-android --no-jetifier
@@ -273,21 +275,20 @@ npx react-native run-android --no-jetifier
 Clear React Native Metro Cache
 npm start -- --reset-cache
 
-SET UP IPHONE DEVELOPER
+## SET UP IPHONE DEVELOPER
 Open Xcode -> preference -> accounts -> add your app account
 Then Click. On manage Certificate and add certificate.
 
-Signing for "rnplayground" requires a development team. Select a development team in the Signing & Capabilities editor.
-Go to you app in Xcode
-Under signing & Capabilities
-Select Team
+## Signing for "rnplayground" requires a development team. 
+- Select a development team in the Signing & Capabilities editor.
+- Go to you app in Xcode
+- Under signing & Capabilities
+- Select Team
 
+## Run the app, now go to settings of the device
+- General -> VPN& Device management -> Trust this app
 
-
-Run the app, now go to settings of the device
-General -> VPN& Device management -> Trust this app
-
-React Native Client called nw_connection_get_connected_socket on unconnected nw_connection
+## React Native Client called nw_connection_get_connected_socket on unconnected nw_connection
 1. To select XCode10 build system: In Xcode go to File -> Project Settings (or Workspace settings) -> Build system, in which change the New Build System to Legacy Build System.
 
 

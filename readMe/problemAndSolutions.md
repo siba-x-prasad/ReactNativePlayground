@@ -6,6 +6,16 @@
 - https://reactnative.dev/docs/getting-started
 - https://medium.com/swlh/a-react-native-kick-start-for-existing-native-projects-c10d2e113988
 
+## TypeError: cli.init is not a function for react native
+- That is error is from the new version 0.69.0 You can use npx react-native init ProjectName --version 0.68.2 and then upgrade to v 0.69 later.
+
+## React native: Android project not found. Maybe run react-native android first?
+- react-native upgrade
+
+## FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+- export NODE_OPTIONS="--max-old-space-size=8192"
+
+
 ## How RN works internally
 - https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html
 

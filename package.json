@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@tsconfig/react-native": "^3.0.2",
+    "@types/jest": "^29.5.5",
+    "@types/react": "^18.2.22",
+    "@types/react-test-renderer": "^18.0.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/native-stack": "^6.9.13",
+    "react-native-safe-area-context": "^4.7.2",
+    "react-native-screens": "^3.25.0"
+  }
+}

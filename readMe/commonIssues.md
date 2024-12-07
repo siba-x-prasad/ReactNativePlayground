@@ -61,6 +61,8 @@ Update JAVA_HOME IN BASH PROFILE
 vim ~/.zshrc
 vim ~/.zprofile
 vim ~/.zshrc
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
 ```
 
 ## ANdroid error while running

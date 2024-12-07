@@ -56,6 +56,13 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```
 
+Update JAVA_HOME IN BASH PROFILE
+```
+vim ~/.zshrc
+vim ~/.zprofile
+vim ~/.zshrc
+```
+
 ## ANdroid error while running
 
 ```

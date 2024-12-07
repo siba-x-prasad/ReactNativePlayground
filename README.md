@@ -23,5 +23,5 @@
 ## [10.Http Request](https://github.com/sibaprasad12/React-Native/blob/main/readMe/10.httpRequest.md)
 ## [11.User Authentication](https://github.com/sibaprasad12/React-Native/blob/main/readMe/11.userAuthentication.md)
 ## [Other Tips And Tricks](https://github.com/sibaprasad12/React-Native/blob/main/readMe/15.otherTipsAndTricks.md)
-## [Common Commands](https://github.com/sibaprasad12/React-Native/blob/main/readMe/Commands.md)
+## [Common Commands](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/Commands.md)
 ## [Common Errors](https://github.com/sibaprasad12/React-Native/blob/main/readMe/commonIssues.md)

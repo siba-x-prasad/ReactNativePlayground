@@ -46,7 +46,7 @@ error Looks like your iOS environment is not properly set. Please go to https://
 ```
 export PATH=$PATH:/Users/sibaprasad/Library/Android/sdk/platform-tools
 export PATH=$PATH:/Users/sibaprasad/Library/Android/sdk/tools
-
+export JAVA_HOME= "/Users/sibaprasad/Library/Java/JavaVirtualMachines/corretto-11.0.23/Contents/Home/"
 android PATH : /Users/sibaprasad/Library/Android/sdk
 
 export ANDROID_HOME=/Users/sibaprasad/Library/Android/sdk

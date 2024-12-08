@@ -1,4 +1,10 @@
 # React Native Set up from scrach
+## React Expo
+- React Native CLI is depricated
+- Use expo
+- follow this : https://docs.expo.dev/get-started/create-a-project/
+- 
+
 - There are 2 ways you can set up react native app for mobile
 - 1. Using react native cli
 - 2. Using react native expo

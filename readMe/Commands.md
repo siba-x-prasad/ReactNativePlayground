@@ -8,7 +8,24 @@
 - npx start
 - npx react-native init
 
-## To run on EMulator
+## EXPO Cli
+- **To Create React Native Project with default template**
+- npx create-expo-app@latest
+- **To Create React Native Project with Template Option**
+- npx create-expo-app --template 
+- If you are not using latest npm version it will hint
+- npm install -g npm@11.0.0 
+- cd my-rn-app
+- npm run android
+- npm run ios
+- npm run web
+
+## To update dependency libs
+- npx npm-check-updates -u && npm i
+- this command with --force or --legacy-peer-deps
+
+
+## To run on Emulator
 
 - react-native run-ios
 - react-native run-android
@@ -18,6 +35,9 @@
 ## Clean watchman or Clear bundle
 
 - watchman watch-del-all
+
+
+
 
 ## Using cl
 

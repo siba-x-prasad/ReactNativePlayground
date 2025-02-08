@@ -1,5 +1,4 @@
-# Common Issues & Solutions
-
+# Common Error And solutions
 - [Best Practice Structure](https://www.linkedin.com/pulse/building-solid-structure-best-practices-react-native-samer-abdalla)
 -
 
@@ -74,3 +73,55 @@ Could not determine the dependencies of task ':app:compileDebugJavaWithJavac'.
 - emulator -avd name-of-your-emulator
 
 ## error Failed to launch emulator
+
+- npm instal
+- If ther are any error
+```
+  npm install --legacy-peer-deps 
+```
+- completely ignores all peerDependencies using the newest version without pinning on file package-lock.json
+
+```
+npm install --force 
+```
+- forces the use of the newest, pinning all the versions on package-lock.json
+
+## Error 1
+```
+Starting: android
+node:internal/modules/cjs/loader:1147
+  throw err;
+```
+- npm cache clean --force
+
+## Error 2
+```
+Error: Cannot find module '/Users/sibaprasad/Workspace/rn/SpendUtility/android'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+```
+## Error 3
+```
+Android project not found. Are you sure this is a React Native project? 
+
+/Users/sibaprasad/.zprofile:3: /Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home not found
+/Users/sibaprasad/Workspace/rn/SpendUtility/node_modules/.generated/launchPackager.command ; exit;
+/Users/sibaprasad/.zshrc:3: /Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home not found
+sibaprasad@sibaprasads-MBP ~ % /Users/sibaprasad/Workspace/rn/SpendUtility/node_modules/.generated/launchPackager.command ; exit;
+warn Package react-native-sqlite-storage contains invalid configuration: "dependency.platforms.ios.project" is not allowed. Please verify it's properly linked using "npx react-native config" command and contact the package maintainers about this.
+warn =================================================================================================
+warn From React Native 0.73, your project's Metro config should extend '@react-native/metro-config'
+warn or it will fail to build. Please copy the template at:
+warn https://github.com/react-native-community/template/blob/main/template/metro.config.js
+warn This warning will be removed in future (https://github.com/facebook/metro/issues/1018).
+warn =================================================================================================
+info Welcome to React Native v0.76
+info Starting dev server on port 8081...
+
+## Unable to run simctl:
+- Error: xcrun simctl help exited with non-zero code: 72

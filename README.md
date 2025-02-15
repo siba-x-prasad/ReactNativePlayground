@@ -34,3 +34,4 @@
 - ## [Common Errors & Solutions](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/16.CommonErrorsAndSolutions.md)
 - ## [Tips & Tricks](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/15.otherTipsAndTricks.md)
 - ## [Interview questions](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/17.InterviewQuestions.md)
+- ## [Projects](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/18.Projects.md)

@@ -32,6 +32,6 @@
 - ## [Networking](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/8.networking.md)
 - ## [Handling User Input](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/9.handlingUserInput.md)
 - ## [Common Errors & Solutions](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/16.CommonErrorsAndSolutions.md)
-- ## [Tips & Tricks](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/15.otherTipsAndTricks.md)
+- ## [Tips & Tricks](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/15.TipsAndTricks.md)
 - ## [Interview questions](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/17.InterviewQuestions.md)
 - ## [Projects](https://github.com/siba-x-prasad/ReactNativePlayground/blob/main/readMe/18.Projects.md)

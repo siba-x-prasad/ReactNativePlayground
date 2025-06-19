@@ -63,32 +63,31 @@ Styling:
 - The Bridge: Understand what the React Native bridge is (the communication layer between JS and Native) and why it can be a bottleneck.
 - Animations:
 - Start with the built-in Animated API.
-Quickly move to react-native-reanimated (v2/v3). It's the modern standard for high-performance, 60 FPS animations because it can run them off the JavaScript thread.
-Going Native (React Native CLI):
-This is when you "eject" from Expo or start a project with the CLI.
-Native Modules: Learn the basics of writing a simple native module in Swift/Objective-C (for iOS) and Kotlin/Java (for Android) to expose native functionality to your JS code. You'd do this for high-performance tasks (like image processing) or to use a specific SDK that doesn't have a React Native library.
-Native UI Components: Learn how to wrap a native UI view so it can be used as a React component.
-Testing & CI/CD:
-Unit/Component Testing: Use Jest and React Native Testing Library.
-End-to-End (E2E) Testing: Learn about tools like Detox or Maestro to automate user flows in your app.
-Deployment: Learn how to automate your builds and deployments to the App Store and Google Play using services like EAS Build (for Expo) or tools like Fastlane.
-Project for Phase 3: Simplified Social Media or Trello Clone
+- Quickly move to react-native-reanimated (v2/v3). It's the modern standard for high-performance, 60 FPS animations because it can run them off the JavaScript thread.
+- Native Modules: Learn the basics of writing a simple native module in Swift/Objective-C (for iOS) and Kotlin/Java (for Android) to expose native functionality to your JS code. You'd do this for high-performance tasks (like image processing) or to use a specific SDK that doesn't have a React Native library.
+- Native UI Components: Learn how to wrap a native UI view so it can be used as a React component.
+- Testing & CI/CD:
+- Unit/Component Testing: Use Jest and React Native Testing Library.
+- End-to-End (E2E) Testing: Learn about tools like Detox or Maestro to automate user flows in your app.
+- Deployment: Learn how to automate your builds and deployments to the App Store and Google Play using services like EAS Build (for Expo) or tools like Fastlane.
+- **Project for Phase 3: Simplified Social Media or Trello Clone**
 
-Features: User authentication (login/signup). A feed with infinite scroll. The ability to create posts with images (using the camera/gallery). Real-time updates (explore Firebase/Supabase). Complex animations and gesture handling (react-native-gesture-handler with reanimated).
-What you'll learn: Everything combined, with a heavy focus on performance, state management at scale, and native features.
+- Features: User authentication (login/signup). A feed with infinite scroll. The ability to create posts with images (using the camera/gallery). Real-time updates (explore Firebase/Supabase). Complex animations and gesture handling (react-native-gesture-handler with reanimated).
+- What you'll learn: Everything combined, with a heavy focus on performance, state management at scale, and native features.
 
 
 
 # React Native with TypeScript: A Zero-to-Hero Curriculum
-Module 0: The Setup & The "Why"
-Goal: Get your development environment ready and understand why TypeScript is a game-changer in React Native.
-
-Environment: We'll start with Expo. It's a framework that handles all the complex native configuration for you.
-Action: Install the Expo CLI. Open your terminal and run: npm install -g expo-cli.
-Action: Create your first project using the TypeScript template. This is crucial.
-Generated bash
+## Module 0: The Setup & The "Why"
+- Goal: Get your development environment ready and understand why TypeScript is a game-changer in React Native.
+- Environment: We'll start with Expo. It's a framework that handles all the complex native configuration for you.
+- Action: Install the Expo CLI. Open your terminal and run: npm install -g expo-cli.
+- Action: Create your first project using the TypeScript template. This is crucial.
+- Generated bash
+```
 npx create-expo-app MyFirstApp --template
-Use code with caution.
+```
+- Use code with caution.
 Bash
 (When prompted, choose the "Blank (TypeScript)" template).
 Action: cd MyFirstApp and run npm start (or npx expo start). This will open a terminal with a QR code. Download the "Expo Go" app on your phone and scan the code. Your app will magically appear on your device!
@@ -96,35 +95,35 @@ Why TypeScript?
 Type Safety: Think of it as a contract. If a component expects a name that is a string, TypeScript will yell at you if you try to give it a number. This catches bugs before you run the code.
 Amazing Autocomplete: Your code editor (like VS Code) will know exactly what properties an object has, making you faster and more accurate.
 Easier Refactoring: Changing code in a large app becomes much safer because TypeScript will tell you everywhere you need to make an update.
-Module 1: The Core Building Blocks
-Goal: Understand the fundamental components and how to style them with typed props.
-
-Core Components: These are your LEGO bricks.
-<View>: The most fundamental component. It's a container, like a <div>.
-<Text>: All text must be inside a <Text> component.
-<Image>: For displaying images (local or from the web).
-<TextInput>: An input field for users.
-<TouchableOpacity>: A wrapper that makes any View pressable with nice feedback.
-<ScrollView>: A generic scrolling container.
-State with useState (Typed):
-Generated typescript
+## Module 1: The Core Building Blocks
+- Goal: Understand the fundamental components and how to style them with typed props.
+- Core Components: These are your LEGO bricks.
+- <View>: The most fundamental component. It's a container, like a <div>.
+- <Text>: All text must be inside a <Text> component.
+- <Image>: For displaying images (local or from the web).
+- <TextInput>: An input field for users.
+- <TouchableOpacity>: A wrapper that makes any View pressable with nice feedback.
+- <ScrollView>: A generic scrolling container.
+- State with useState (Typed):
+- Generated typescript
+```
 import React, { useState } from 'react';
 // TS infers this is a number because of the initial value 0.
 const [count, setCount] = useState(0);
 
 // If state can be one of several types, be explicit:
 const [user, setUser] = useState<User | null>(null);
-Use code with caution.
-TypeScript
-Styling with StyleSheet:
-You'll use JavaScript objects for styling. It's like CSS, but with camelCase properties (backgroundColor instead of background-color).
-Flexbox is king for layout. Master flex, flexDirection, alignItems, and justifyContent.
-Creating Components with Typed Props: This is where TS really shines.
-Action (Your First Assignment): Create a reusable PrimaryButton component.
-Step 1: Define the props type. Create a type for your component's props.
+```
+- Use code with caution.
+## Styling with StyleSheet:
+- You'll use JavaScript objects for styling. It's like CSS, but with camelCase properties (backgroundColor instead of background-color).
+- Flexbox is king for layout. Master flex, flexDirection, alignItems, and justifyContent.
+- Creating Components with Typed Props: This is where TS really shines.
+## Action (Your First Assignment): Create a reusable PrimaryButton component.
+- Step 1: Define the props type. Create a type for your component's props.
 Generated typescript
 // PrimaryButton.tsx
-
+```
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
@@ -152,23 +151,24 @@ const styles = StyleSheet.create({
 });
 
 export default PrimaryButton;
-Use code with caution.
-TypeScript
-Step 3: Use the component. In App.tsx, try to use it correctly and incorrectly. You'll see TypeScript give you an error in your editor if you forget title or onPress!
-Module 2: Building Multi-Screen Apps
-Goal: Learn how to navigate between screens and handle lists of data.
+```
 
-Navigation with React Navigation: This is the standard library for navigation.
-Action: Follow the React Navigation "Getting Started" guide.
-Stack Navigator: For moving between screens where one is "on top" of another.
-Tab Navigator: For a bottom tab bar.
-TypeScript Focus: React Navigation has incredible TS support. You'll create a type for all your routes and their parameters. This prevents you from navigating to a screen with the wrong data.
+- **Step 3:** Use the component. In App.tsx, try to use it correctly and incorrectly. You'll see TypeScript give you an error in your editor if you forget title or onPress!
+- **Module 2:** Building Multi-Screen Apps
+- Goal: Learn how to navigate between screens and handle lists of data.
+- Navigation with React Navigation: This is the standard library for navigation.
+- Action: Follow the React Navigation "Getting Started" guide.
+- Stack Navigator: For moving between screens where one is "on top" of another.
+- Tab Navigator: For a bottom tab bar.
+- TypeScript Focus: React Navigation has incredible TS support. You'll create a type for all your routes and their parameters. This prevents you from navigating to a screen with the wrong data.
 Generated typescript
+```
 // types.ts
 export type RootStackParamList = {
   Home: undefined; // No params for Home screen
   Profile: { userId: string }; // Profile screen needs a userId
 };
+```
 Use code with caution.
 TypeScript
 Displaying Lists with FlatList:
@@ -177,16 +177,19 @@ Always use FlatList. It's smart and only renders the items currently on screen.
 Action (Your Second Assignment): Fetch a list of users from a public API like JSONPlaceholder and display them in a FlatList.
 Step 1: Define the data type.
 Generated typescript
+```
 // types.ts
 export type User = {
   id: number;
   name: string;
   email: string;
 };
+```
 Use code with caution.
 TypeScript
 Step 2: Fetch and store the data in typed state.
 Generated typescript
+```
 // UsersScreen.tsx
 import { User } from './types'; // Import your type
 
@@ -199,10 +202,12 @@ useEffect(() => {
     .then((data: User[]) => setUsers(data)) // Tell TS the data is an array of Users
     .finally(() => setLoading(false));
 }, []);
+```
 Use code with caution.
 TypeScript
 Step 3: Render with a typed FlatList.
 Generated typescript
+```
 import { FlatList } from 'react-native';
 
 return (
@@ -217,6 +222,7 @@ return (
     )}
   />
 );
+```
 Use code with caution.
 TypeScript
 Module 3: State, Data, and Polish (Advanced)
@@ -232,20 +238,7 @@ Learn react-native-reanimated. This is the modern, performant way to do animatio
 Device APIs:
 Using Expo's modules is easy. Want to use the camera? expo-camera. Location? expo-location.
 TypeScript Focus: These modules come with their own types. So when you get a location object back, you can import the LocationObject type and your editor will tell you it has properties like coords.latitude.
-Performance:
-React.memo: Wrap components in React.memo to prevent them from re-rendering if their props haven't changed.
-useCallback: To memoize functions so they don't cause child components to re-render.
-useMemo: To memoize expensive calculations.
-Final Project Suggestion: A Photo Log App
-This project combines everything we've learned.
-
-Screens:
-A "Log" screen (FlatList) showing all entries.
-A "New Entry" screen.
-Functionality:
-On the "New Entry" screen, have a TextInput for a description.
-Have a button that opens the device camera (expo-camera) to take a picture.
-When a picture is taken and the user adds a description, save this entry.
-Use AsyncStorage (a simple key-value store) to persist the log entries on the device so they don't disappear when the app closes.
-Use React Navigation to move between the Log and New Entry screens.
-Use TypeScript for everything: your navigation params, your state, your component props, and the shape of a "Log Entry" object ({ id: string, text: string, imageUri: string }).
+## Performance:
+- React.memo: Wrap components in React.memo to prevent them from re-rendering if their props haven't changed.
+- useCallback: To memoize functions so they don't cause child components to re-render.
+- useMemo: To memoize expensive calculations.

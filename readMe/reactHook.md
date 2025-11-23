@@ -174,9 +174,24 @@ const styles = StyleSheet.create({
 });
 ```
 ## useRef
+- useRef is a React Hook that lets you store mutable values that:
+- Do NOT cause re-renders
+- Persist for the entire component lifetime
+- Can store references to UI elements (TextInput, ScrollView, FlatList, etc.)
+- Can store mutable variables (like instance variables in classes)
 - Purpose: To get a reference to a component instance (like an input) or to store a mutable value that does not cause a re-render when it changes.
 - Syntax: const myRef = useRef(initialValue);
 - React Native Example: Focusing a TextInput programmatically
+- 🎯 When to Use useRef
+- Use useRef in these common cases:
+- 1️⃣ Accessing a component reference
+  - Example: calling methods on a TextInput, ScrollView, or FlatList.
+- 2️⃣ Storing mutable values that should NOT re-render your UI
+  - Example: tracking previous values, counters, timers, flags, etc.
+- 3️⃣ Avoiding re-renders when storing values inside state would cause loops
+  - Example: storing animation values, gesture refs, socket connections, etc.
+- 4️⃣ Managing timers or intervals
+  - Example: storing setInterval ID so you can clear it.
 ```
 import React, { useRef } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
